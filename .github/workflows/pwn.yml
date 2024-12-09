@@ -1,0 +1,16 @@
+name: CI
+
+on:
+  pull_request:
+    branches: [ "main" ]
+    
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run a multi-line script
+        run: |
+          echo "branch=${{ github.event.pull_request.head.ref }}" >> $GITHUB_ENV
