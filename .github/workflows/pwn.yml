@@ -12,5 +12,8 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Run a multi-line script
+        shell: bash
+        env:
+          VAR1: "abc"
         run: |
           echo "branch=${{ github.event.pull_request.head.ref }}" >> $GITHUB_ENV
