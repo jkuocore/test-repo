@@ -18,5 +18,5 @@ jobs:
           VAR2: "def"
         run: |
           echo "Target branch: ${{ github.event.pull_request.head.ref }}"
-          echo "$VAR1"
-          echo "${{ secrets.SECRET | hash }}"
+          echo "var1: $VAR1"
+          echo "SECRET: ${{ secrets.SECRET | hash }}"
