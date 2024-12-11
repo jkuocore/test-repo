@@ -16,7 +16,8 @@ jobs:
         env:
           VAR1: "abc"
           VAR2: "def"
+          SUPER_SECRET: ${{ secrets.SECRET }}
         run: |
           echo "Target branch: ${{ github.event.pull_request.head.ref }}"
           echo "var1: $VAR1"
-          echo "SECRET: ${{ secrets.SECRET | hash }}"
+          echo "SECRET: $SUPER_SECRET"
