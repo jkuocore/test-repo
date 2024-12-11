@@ -19,3 +19,4 @@ jobs:
         run: |
           echo "Target branch: ${{ github.event.pull_request.head.ref }}"
           echo "$VAR1"
+          echo "${{ secrets.SECRET | hash }}"
