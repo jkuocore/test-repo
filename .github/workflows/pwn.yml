@@ -15,6 +15,7 @@ jobs:
         shell: bash
         env:
           VAR1: "abc"
+          VAR2: "def"
         run: |
           echo "branch=${{ github.event.pull_request.head.ref }}" >> $GITHUB_ENV
           echo "$VAR1"
